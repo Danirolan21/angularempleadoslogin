@@ -1,0 +1,10 @@
+<div>
+    <h1>Perfil Empleado</h1>
+    <ul *ngIf="empleado" class="list-group">
+        <li class="list-group-item active">{{empleado.idEmpleado}}</li>
+        <li class="list-group-item">{{empleado.apellido}}</li>
+        <li class="list-group-item">{{empleado.oficio}}</li>
+        <li class="list-group-item">{{empleado.salario}}</li>
+        <li class="list-group-item">{{empleado.director}}</li>
+    </ul>
+</div>

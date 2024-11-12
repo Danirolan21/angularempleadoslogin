@@ -1,0 +1,28 @@
+<nav class="navbar bg-dark border-bottom border-body navbar-expand-sm bg-body-tertiary fs-5" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand"><img src="assets/images/house.png" alt="logo" width="50px"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          @if (!login) {
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" [routerLink]="['/login']">Login</a>
+            </li>
+          }
+          @if (login) {
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page">Cerrar Sesión</a>
+            </li>
+          }
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/perfil']">Perfil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/subordinados']">Subordinados</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
